@@ -31,6 +31,7 @@ if t == 1:
             d = input("Введите еще раз.\n")
         for j in range(len(d)):
             a[i][j] = int(d[j])
+    print()
 elif t == 2:
     for i in range(len(a)):
         for j in range(len(a[0])):
@@ -58,9 +59,9 @@ for i in range(e):
     pr()
     tm.sleep(0.4)
     a = copy_a.copy()
-    #if a in evolutions:
-        #print("Складывается периодическая конфигурация,# программа прерывается.")
-        #break
+    if a in evolutions:
+        print("Складывается периодическая конфигурация, программа прерывается.")
+        break
     for i in range(len(a)):
         for j in range(len(a[0])):
             if a[i][j] == 1:
@@ -69,4 +70,4 @@ for i in range(e):
         print("На поле нет ни одной живой клетки, программа прерывается.")
         break
     flg1 = 0
-    #evolutions.append(a)
+    evolutions.append(a)
