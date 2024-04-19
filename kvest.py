@@ -10,7 +10,7 @@ while flg == 0:
 a, copy_a = [[0 for i in range(b)] for j in range(c)], []
 def pr():
     for i in range(len(a)):
-        print(#*copy_a[i], sep="")
+        print(*copy_a[i], sep="")
     print()
 def isInField(x, y):
     if x <= len(a[0]) - 1 and x >= 0 and y >= 0 and y <= len(a) - 1:
