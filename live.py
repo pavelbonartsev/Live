@@ -19,13 +19,13 @@ while d.lower() != "стоп":
         while len(e) != a and (sorted(list(set(e)))) != [0, 1]:
             e = input("Введите мир, состоящий только из нулей и единиц, и такой, чтобы количество элементов в мире было равно введенной Вами ранее длине мира.\n")
     e = [int(i) for i in e]
-    print("Стартовая генерация:", end=" ")
+    print("Стартовая генерация:", end=" |")
     for i in e:
         if i == 0:
             print(" ", end="")
         elif i == 1:
             print("*", end="")
-    print()
+    print("|")
     for _ in range(b):
         for i in range(len(e)):
             if i == len(e) - 1:
@@ -38,11 +38,12 @@ while d.lower() != "стоп":
                     e[i] = 0
                 elif e[i] == 0 and ((e[i - 1] + e[i + 1]) == 1):
                     e[i] = 1
+        print("|", end="")
         for i in e:
             if i == 0:
                 print(" ", end="")
             elif i == 1:
                 print("*", end="")
-        print()
+        print("|")
         t.sleep(0.5)
     d = input("Начать генерацию заново? Нет - стоп (без учета регистра), все остальное - да.\n")
